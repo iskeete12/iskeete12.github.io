@@ -36,11 +36,11 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Container Layout */
+/* Container Layout with Flexbox */
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    display: flex;
+    justify-content: space-between; /* Flex property */
+    flex-wrap: wrap; /* Flex property */
     margin-top: 20px;
 }
 
@@ -49,6 +49,8 @@ header nav ul li a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: 48%; /* Flex property */
+    margin-bottom: 20px;
 }
 
 /* About Section */
@@ -79,7 +81,36 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.btn {
-    background-color: #16a085;
-    color: white;
-   
+/* Section Styling with Contextual Selectors */
+section h2 {
+    color: #2c3e50;
+}
+
+section > ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+/* Box Model: Margins, Padding, Borders */
+.skills ul {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.about-info p {
+    padding: 10px;
+    border: 1px dashed #16a085;
+}
+
+.fun-fact p {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #f39c12;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+}
